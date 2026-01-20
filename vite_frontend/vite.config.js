@@ -3,7 +3,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
     server: {
         host: '0.0.0.0',
-        allowedHosts: ['.kavia.ai'],
+        // Allow Kavia preview hostnames (including vscode-internal.* used by embedded previews)
+        allowedHosts: ['.kavia.ai', '.vscode-internal.kavia.ai'],
         port: 3000,
         strictPort: true,
         cors: true,
